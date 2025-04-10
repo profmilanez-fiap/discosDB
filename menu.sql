@@ -17,30 +17,20 @@
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
   BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "TBSPC_ALUNOS" ;
-REM INSERTING into PF1588.MENU
+REM INSERTING into MENU1
 SET DEFINE OFF;
-Insert into PF1588.MENU (ID,MENU,EXIBIR,LINK) values ('1','Grunge','1','grunge');
-Insert into PF1588.MENU (ID,MENU,EXIBIR,LINK) values ('2','Heavy Metal','1','heavy-metal');
-Insert into PF1588.MENU (ID,MENU,EXIBIR,LINK) values ('3','Punk Rock','1','punk-rock');
-Insert into PF1588.MENU (ID,MENU,EXIBIR,LINK) values ('4','Pós-Punk','1','pos-punk');
-Insert into PF1588.MENU (ID,MENU,EXIBIR,LINK) values ('5','Rock Progressivo','1','rock-progressivo');
-Insert into PF1588.MENU (ID,MENU,EXIBIR,LINK) values ('6','Rock and Roll','1','rock-and-roll');
---------------------------------------------------------
---  DDL for Index SYS_C004614009
---------------------------------------------------------
+Insert into MENU (MENU,EXIBIR,LINK) values ('Grunge',1,'grunge');
+Insert into MENU (MENU,EXIBIR,LINK) values ('Heavy Metal',1,'heavy-metal');
+Insert into MENU (MENU,EXIBIR,LINK) values ('Punk Rock',1,'punk-rock');
+Insert into MENU (MENU,EXIBIR,LINK) values ('Pós-Punk',1,'pos-punk');
+Insert into MENU (MENU,EXIBIR,LINK) values ('Rock Progressivo',1,'rock-progressivo');
+Insert into MENU (MENU,EXIBIR,LINK) values ('Rock and Roll',1,'rock-and-roll');
 
-  CREATE UNIQUE INDEX "SYS_C004614009" ON "MENU" ("ID") 
-  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
-  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
-  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
-  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
-  TABLESPACE "TBSPC_ALUNOS" ;
+
 --------------------------------------------------------
 --  Constraints for Table MENU
 --------------------------------------------------------
 
-  ALTER TABLE "MENU" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "MENU" MODIFY ("MENU" NOT NULL ENABLE);
   ALTER TABLE "MENU" ADD PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
