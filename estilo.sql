@@ -2,12 +2,12 @@
 --  Arquivo criado - terça-feira-abril-15-2025   
 --------------------------------------------------------
 --------------------------------------------------------
---  DDL for Table MENU
+--  DDL for Table ESTILO
 --------------------------------------------------------
 
-  CREATE TABLE "MENU" 
+  CREATE TABLE "ESTILO" 
    (	"ID" NUMBER GENERATED ALWAYS AS IDENTITY MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE , 
-	"MENU" VARCHAR2(255 BYTE), 
+	"ESTILO" VARCHAR2(255 BYTE), 
 	"EXIBIR" NUMBER(1,0) DEFAULT 1, 
 	"LINKS" VARCHAR2(255 BYTE)
    ) SEGMENT CREATION IMMEDIATE 
@@ -17,31 +17,31 @@
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
   BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "TBSPC_ALUNOS" ;
-REM INSERTING into MENU
+REM INSERTING into ESTILO
 SET DEFINE OFF;
-Insert into MENU (MENU,EXIBIR,LINKS) values ('Grunge','1','grunge');
-Insert into MENU (MENU,EXIBIR,LINKS) values ('Heavy Metal','1','heavy-metal');
-Insert into MENU (MENU,EXIBIR,LINKS) values ('Punk Rock','1','punk-rock');
-Insert into MENU (MENU,EXIBIR,LINKS) values ('Pós-Punk','1','pos-punk');
-Insert into MENU (MENU,EXIBIR,LINKS) values ('Rock Progressivo','1','rock-progressivo');
-Insert into MENU (MENU,EXIBIR,LINKS) values ('Rock and Roll','1','rock-and-roll');
+Insert into ESTILO (ESTILO,EXIBIR,LINKS) values ('Grunge','1','grunge');
+Insert into ESTILO (ESTILO,EXIBIR,LINKS) values ('Heavy Metal','1','heavy-metal');
+Insert into ESTILO (ESTILO,EXIBIR,LINKS) values ('Punk Rock','1','punk-rock');
+Insert into ESTILO (ESTILO,EXIBIR,LINKS) values ('Pós-Punk','1','pos-punk');
+Insert into ESTILO (ESTILO,EXIBIR,LINKS) values ('Rock Progressivo','1','rock-progressivo');
+Insert into ESTILO (ESTILO,EXIBIR,LINKS) values ('Rock and Roll','1','rock-and-roll');
 --------------------------------------------------------
 --  DDL for Index SYS_C004614009
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "SYS_C004614009" ON "MENU" ("ID") 
+  CREATE UNIQUE INDEX "SYS_C004614009" ON "ESTILO" ("ID") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
   BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "TBSPC_ALUNOS" ;
 --------------------------------------------------------
---  Constraints for Table MENU
+--  Constraints for Table ESTILO
 --------------------------------------------------------
 
-  ALTER TABLE "MENU" MODIFY ("ID" NOT NULL ENABLE);
-  ALTER TABLE "MENU" MODIFY ("MENU" NOT NULL ENABLE);
-  ALTER TABLE "MENU" ADD PRIMARY KEY ("ID")
+  ALTER TABLE "ESTILO" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "ESTILO" MODIFY ("ESTILO" NOT NULL ENABLE);
+  ALTER TABLE "ESTILO" ADD PRIMARY KEY ("ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
